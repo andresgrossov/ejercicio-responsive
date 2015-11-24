@@ -516,8 +516,9 @@ nav.vertical {
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0,0,0,.15);
   overflow: hidden;
+  position: fixed;
   text-align: center;
-  z-index: 200;
+  z-index: 100;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -541,10 +542,12 @@ nav.vertical > ul > li > a {
 	/*box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);*/
 	color: rgb(255,255,255);
 	display: block;
+  padding: 0 20px 0 20px;
 	font-size: .85rem;
 	font-weight: 500;
+  text-align: center;
 	height: 50px;
-	letter-spacing: .5rem;
+	letter-spacing: .3rem;
 	line-height: 50px;
 	text-shadow: 0 1px 1px rgba(0,0,0,.1);
 	text-transform: uppercase;
@@ -561,7 +564,7 @@ nav.vertical > ul > li > a:hover {
 	cursor: pointer;
 }
 
-@media only screen and (min-width : 760px){
+@media only screen and (min-width : 1148px){
 	/*HACER EL MENÚ VERTICAL*/
   nav.vertical > ul > li {
     /*position: relative;*/
