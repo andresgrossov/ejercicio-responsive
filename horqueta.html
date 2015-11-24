@@ -10,12 +10,13 @@
 		<title>Documento sin título</title>
 		<link href="css/estilos_horqueta.css" rel="stylesheet" type="text/css">
 		<script src="js/prefixfree.min.js"></script>
+		<script src="js/funciones_responsive.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer>
 		  {lang: 'es'}
 		</script>
 	</head>
 
-	<body>
+	<body onresize="checkScreenMinSize()">
 		<!-- <div id="barramenu">
 			<a href="http://www.rutasdelconflicto.com" target="_blank"><div id="inicio" class="estilotitulos">Inicio</div></a>
 			<a href="http://rutasdelconflicto.com/proyecto/" target="_blank"><div id="elproyecto" class="estilotitulos">El proyecto</div></a>
@@ -31,12 +32,10 @@
 
 <!-- INICIO: MENÚ RESPONSIVE PARA MÓVILES -->
 		<div id="barramenu">
+			<a><img src="img/hamburger.png" onclick="hamburgerButtonClick()"></img></a>
 			<a href="http://rutasdelconflicto.com" target="_blank"><div id="logo_home"></div></a>
-			<nav class="vertical">
+			<nav id="menu_responsive" class="vertical">
 			    <ul>
-			      <li>
-							<a href="#" target="_blank"><img src="img/hamburger.png"></img></a>
-					  </li>
 			      <li>
 							<a href="http://www.rutasdelconflicto.com" target="_blank"><div>Inicio</div></a>
 					  </li>

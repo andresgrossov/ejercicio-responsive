@@ -499,11 +499,18 @@ a:hover
 
 /*ESTILOS DEL MENÚ RESPONSIVE PARA MÓVILES*/
 
+#barramenu > a > img {
+  position: fixed;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+}
+
 #logo_home
 {
 	position:fixed;
-	width:15%;
-	height:15%;
+	width:10%;
+	height:10%;
 	top:0%;
 	left:3%;
 	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
@@ -523,6 +530,8 @@ nav.vertical {
   z-index: 100;
   font-family: 'Oswald', sans-serif;
   width: 100%;
+  top: 50px;
+  display: none;
 }
 
 nav.vertical > ul {
@@ -560,13 +569,6 @@ nav.vertical > ul > li > a {
 	text-decoration: none;
 }
 
-nav.vertical > ul > li > a > img {
-  position: fixed;
-  left: 10px;
-  width: 50px;
-  height: 40px;
-}
-
 nav.vertical > ul > li > a:hover {
 	background-color: rgb(114, 51, 98);
 	background-image: -webkit-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
@@ -584,11 +586,13 @@ nav.vertical > ul > li > a:hover {
     width: auto;
   }
   nav.vertical {
+    top: 0px;
     left:15%;
     text-align: center;
+    display: block;
   }
 
-  nav.vertical > ul > li > a > img {
+  #barramenu > a > img {
     display: none;
   }
 
