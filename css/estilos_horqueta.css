@@ -1,0 +1,726 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Variables */
+body {
+  background: #ffff;
+  z-index:-1000;
+}
+
+
+
+h1
+{
+  	font-family: 'Oxygen';
+	font-size:4em;
+	color:#8F8F8F;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	border-bottom:2px solid #8F8F8F;
+	z-index:3;
+}
+
+h2
+{
+	font-family: 'Kameron', serif;
+	font-size:1em;
+	color:#8F8F8F;
+	text-align:center;
+	margin:2%;
+	font-weight:400;
+}
+
+h3
+{
+	font-family: 'Kameron', serif;
+	font-size:1.1em;
+	color:#efefef;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	z-index:3;
+}
+
+h4
+{
+	font-family: 'Kameron', serif;
+	font-size:1.1em;
+	color:#2E2E2E;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:bold;
+	z-index:3;
+}
+
+h5
+{
+	font-family: 'Kameron', serif;
+	font-size:1em;
+	color:#2E2E2E;
+	text-align:center;
+	margin:2%;
+	font-weight:400;
+}
+
+p{
+	font-weight:lighter;
+	margin-bottom:15px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	line-height:1.6em;
+}
+
+@font-face {
+  font-family: 'Genericons';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/genericons-regular-webfont.eot") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="genericon"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Genericons';
+  text-decoration: inherit;
+  font-weight: normal;
+  font-style: normal;
+  vertical-align: top;
+}
+
+/* IE7 */
+[class*="genericon"] {
+  *overflow: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+/*ESTILOS PARA EL DIV SOBRE LA FOTO DEL TÍTULO*/
+.overlaptitulo
+{
+  position: absolute; // Reposition logo from the natural layout
+  left: 15px;
+  margin-left: 6%;
+  top: 65px;
+  width: 520px;
+  height: 100%;
+  z-index: 2;
+}
+/*ESTILOS PARA EL PÁRRAFO DEL DIV SOBRE LA FOTO DEL TÍTULO*/
+.overlaptitulo p {
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+    font-size: 3em;
+    letter-spacing: -1px;
+    font-weight: 300;
+    line-height: 1.1em;
+  text-align: left;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/*ESTILOS PARA EL DIV SOBRE EL MAPA*/
+.overlap
+{
+  position: absolute; // Reposition logo from the natural layout
+  left: 75px;
+  margin-left: 50%;
+  margin-right: 10%;
+  top: 100px;
+  width: 600px;
+  height: 400px;
+  z-index: 2;
+}
+/*ESTILOS PARA EL PÁRRAFO DEL DIV SOBRE EL MAPA*/
+.overlap p {
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/*ACORDEÓN*/
+#contenedor100eventos{
+	float:left;
+	width:100%;
+}
+
+.container {
+  margin: 0 auto;
+  text-align:center;
+
+}
+
+.accordion-eventos {
+  background: #FFF;
+  background-image:url(http://rutasdelconflicto.com/sobrevivi/img/horqueta_prensa3.jpg);
+  width: 100%;
+  min-width: 950px;
+  display: block;
+  list-style-type: none;
+  overflow: hidden;
+  height: 650px;
+  font-size: 0;
+}
+
+.tabs {
+  display: inline-block;
+  background-color: #000000;
+  border-right: #5ab2ca 1px solid;
+/*AQUÍ SE AJUSTA EL ANCHO DEL TAB*/
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-size: 18px;
+  -moz-transition: all 0.4s 0.1s ease-in-out;
+  -o-transition: all 0.4s 0.1s ease-in-out;
+  -webkit-transition: all 0.4s 0.1s;
+  -webkit-transition-delay: ease-in-out;
+  transition: all 0.4s 0.1s ease-in-out;
+}
+.tabs:hover {
+/*AQUÍ SE AJUSTA EL ANCHO DEL PÁRRAFO CUÁNDO OCURRE EL EVENTO "hover" = ancho del párrafo + ancho de la márgen - padding izquiedo*/
+  width: 605px;
+}
+.tabs:hover .social-links a:before {
+  margin-left: -100px;
+}
+.tabs:hover .social-links a:after {
+  margin-left: -5px;
+}
+.tabs .paragraph {
+  position: relative;
+/*AQUÍ SE AJUSTA EL ANCHO DEL PÁRRAFO*/
+  width: 455px;
+/*AQUÍ SE AJUSTA LA MÁRGEN DEL PÁRRAFO*/
+  margin-left: 160px;
+  padding: 50px 0 0 10px;
+/*AQUÍ SE AJUSTA EL LARGO DEL PÁRRAFO*/
+  height: 100%;
+  background: #fff;
+  margin-top:-130px;
+}
+.tabs .paragraph h1 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.tabs .paragraph p {
+  font-size: 0.88em;
+  line-height: 1.5em;
+  padding-right: 30px;
+  text-align:justify;
+
+}
+
+.social-links {
+  display: block;
+}
+.social-links a {
+  	font-family: 'Oxygen';
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    height: 23px;
+    margin-left: -60px;
+    margin-top: 100px;
+    text-decoration: none;
+    transform: rotate(-90deg);
+    width: 190px;
+}
+
+.social-links a:before, .social-links a:after {
+	width:180px;
+	top:-40px;
+	left:-30px;
+	-webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.social-links a:before, .social-links a:after {
+  -moz-transition: all 0.4s 0.1s ease-in-out;
+  -o-transition: all 0.4s 0.1s ease-in-out;
+  -webkit-transition: all 0.4s 0.1s;
+  -webkit-transition-delay: ease-in-out;
+  transition: all 0.4s 0.1s ease-in-out;
+  width: 80px;
+  height: 200px;
+  position: absolute;
+  padding-top: 90px;
+  padding-left: 25px;
+  display: block;
+  color: #fff;
+}
+.social-links a:after {
+  font-size: 48px;
+  padding-left: 20px;
+  padding-top: 80px;
+  margin-left: 85px;
+}
+
+.num1 a:before, .num1 a:after {
+	width:400px;
+	top:-40px;
+	left:-30px;
+	-webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+/*FINAL ESTILO ACORDEÓN*/
+
+/*ESTILOS TÍTULOS*/
+.estilotitulos
+{
+	font-family: 'Oswald', sans-serif;
+	font-size:50px;
+}
+
+/*FUENTES*/
+/* latin-ext */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v5/LC4u_jU27qpsdszDEgeU_3-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/*ESTILOS MENU*/
+#logo_home
+{
+	position:fixed;
+	width:10%;
+	height:10%;
+	top:0%;
+	left:6%;
+	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+	z-index:100;
+}
+
+#barramenu
+{
+	position:fixed;
+	width:100%;
+	height:4%;
+	top:0%;
+	left:0%;
+	background-color:#2f7474;
+	z-index:100;
+	font-size:0.9em;
+	text-align:center;
+}
+
+#inicio{
+	position:fixed;
+	left:25%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+#elproyecto{
+	position:fixed;
+	left:30%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+#linea{
+	position:fixed;
+	left:38%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+#geografia{
+	position:fixed;
+	left:47%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+#busqueda{
+	position:fixed;
+	left:60%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+#cifras{
+	position:fixed;
+	left:72%;
+	line-height:0.8em;
+	color:#FFF;
+	text-transform:uppercase;
+	margin:7px;
+	font-weight:400;
+	font-size:16px;
+	margin-bottom:10px
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+#fb
+{
+	position:fixed;
+	top:0%;
+	left:91%;
+	width:2%;
+	height:4%;
+	line-height:0.8em;
+	background-size:contain;
+	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_facebook.png);
+	background-repeat:no-repeat;
+	color:#FFF;
+	text-transform:uppercase;
+}
+
+#twitter
+{
+	position:fixed;
+	top:0%;
+	left:94%;
+	width:2.4%;
+	height:4%;
+	line-height:0.8em;
+	background-size:contain;
+	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_twitter.png);
+	background-repeat:no-repeat;
+	color:#FFF;
+	text-transform:uppercase;
+}
+
+#insta
+{
+	position:fixed;
+	top:0%;
+	left:97%;
+	width:2.4%;
+	height:4%;
+	line-height:0.8em;
+	background-size:contain;
+	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_instagram.png);
+	background-repeat:no-repeat;
+	color:#FFF;
+	text-transform:uppercase;
+}
+/*ESTILOS DEL HTML*/
+p{
+	font-family:'Oxygen', sans-serif;
+	}
+
+#oso
+{width:100%;
+height:100%;
+position:fixed;
+top:0%;
+left:0%;
+	}
+#oso img
+{
+	width:100%;
+
+	}
+
+#contenido
+{position:absolute;
+width:100%;
+top:100%;
+left:0%;
+z-index:20;
+background-color:#FFFFFF;
+	}
+
+#foto{
+	width:100%;
+	height:100%;
+}
+
+#foto img
+{
+	width:100%;
+	}
+
+
+
+#primero
+{
+  background-color: #FAFAFA;
+  width:100%;
+  z-index:21;
+  height:50%;
+  float:left;
+}
+
+#texto
+{
+  padding-left:25%;
+  padding-right:25%;
+  background-color:#FAFAFA;
+}
+
+#texto img
+{
+  float: left;
+  margin-right:15px;
+  margin-left:-25px;
+}
+
+#texto p img
+{
+  float: right;
+  margin-right:-80px;
+  margin-left:15px;
+}
+
+#texto iframe
+{
+  float:left;
+  padding-right:20px;
+}
+
+#segundo
+{
+  background-color:#FAFAFA;
+  width:100%;
+  z-index:21;
+  height:50%;
+  float:left;
+}
+
+#textodos
+{
+  padding-left:25%;
+  padding-right:25%;
+  background-color:#FAFAFA;
+}
+
+#textodos img
+{
+  float: right;
+  margin-right:-80px;
+  margin-left:15px;
+}
+
+#tercero
+{
+  background-color: #FAFAFA;
+  width:100%;
+  z-index:21;
+  height:50%;
+  float:left;
+}
+
+#textotres
+{
+  padding-left:25%;
+  padding-right:25%;
+  background-color:#FAFAFA;
+}
+
+#textotres img
+{
+  float: left;
+  margin-right:15px;
+  margin-left:-25px;
+}
+
+#textotres p img
+{
+  float: right;
+  margin-right:-80px;
+  margin-left:15px;
+}
+
+#cuarto
+{
+  background-color:#FAFAFA;
+  width:100%;
+  z-index:21;
+  height:50%;
+  float:left;
+}
+
+#textocuatro
+{
+  padding-left:25%;
+  padding-right:25%;
+  background-color:#FAFAFA;
+}
+
+#textocuatro img
+{
+  float: right;
+  margin-right:-80px;
+  margin-left:15px;
+}
+
+#titulocronica
+{
+	color:#FFFFFF;
+	height:80px;
+	padding:30px;
+	background-color: #000000;
+
+}
+#titulojusticia
+{
+	color:#000000;
+	height:80px;
+	padding:30px;
+}
+#titulojusticia p
+{
+	border-top:1px solid #000000;
+	border-style:dashed;
+	color:#000000;
+	height:80px;
+}
+
+#tituloverdad
+{
+	color:#000000;
+	height:80px;
+	padding:30px;
+
+}
+#tituloverdad p
+{
+	border-top:1px solid #000000;
+	border-style:dashed;
+	color:#000000;
+	height:80px;
+}
+
+#tituloverdad2
+{
+	color:#000000;
+	height:80px;
+	padding:30px;
+}
+#tituloverdad2 p
+{
+	border-top:1px solid #000000;
+	border-style:dashed;
+	color:#000000;
+	height:80px;
+}
+
+#tituloreparacion2
+{
+	color:#000000;
+	height:80px;
+	padding:30px;
+}
+#tituloreparacion2 p
+{
+	border-top:1px solid #000000;
+	border-style:dashed;
+	color:#000000;
+	height:80px;
+}
