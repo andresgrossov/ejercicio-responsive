@@ -361,25 +361,12 @@ p{
 }
 
 /*ESTILOS MENU*/
-#logo_home
-{
-	position:fixed;
-	width:10%;
-	height:10%;
-	top:0%;
-	left:6%;
-	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size:contain;
-	z-index:100;
-}
 
 #barramenu
 {
 	position:fixed;
 	width:100%;
-	height:4%;
+	height:50px;
 	top:0%;
 	left:0%;
 	background-color:#2f7474;
@@ -512,14 +499,30 @@ a:hover
 
 /*ESTILOS DEL MENÚ RESPONSIVE PARA MÓVILES*/
 
+#logo_home
+{
+	position:fixed;
+	width:15%;
+	height:15%;
+	top:0%;
+	left:3%;
+	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+	z-index:200;
+  display: none;
+}
+
 nav.vertical {
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0,0,0,.15);
+  /*box-shadow: 0 0 10px rgba(0,0,0,.15);*/
   overflow: hidden;
   position: fixed;
-  text-align: center;
+  text-align: left;
   z-index: 100;
   font-family: 'Oswald', sans-serif;
+  width: 100%;
 }
 
 nav.vertical > ul {
@@ -528,8 +531,10 @@ nav.vertical > ul {
 
 nav.vertical > ul > li {
   display: block;
-  position: relative;
-  width: auto;
+}
+
+nav.vertical > ul > li {
+  display: block;
 }
 
 nav.vertical > ul > li > a {
@@ -545,14 +550,21 @@ nav.vertical > ul > li > a {
   padding: 0 20px 0 20px;
 	font-size: .85rem;
 	font-weight: 500;
-  text-align: center;
+  /*text-align: center;*/
 	height: 50px;
 	letter-spacing: .3rem;
 	line-height: 50px;
-	text-shadow: 0 1px 1px rgba(0,0,0,.1);
+	/*text-shadow: 0 1px 1px rgba(0,0,0,.1);*/
 	text-transform: uppercase;
 	transition: all .1s ease;
 	text-decoration: none;
+}
+
+nav.vertical > ul > li > a > img {
+  position: fixed;
+  left: 10px;
+  width: 50px;
+  height: 40px;
 }
 
 nav.vertical > ul > li > a:hover {
@@ -567,9 +579,24 @@ nav.vertical > ul > li > a:hover {
 @media only screen and (min-width : 1148px){
 	/*HACER EL MENÚ VERTICAL*/
   nav.vertical > ul > li {
-    /*position: relative;*/
+    position: relative;
     float: left;
+    width: auto;
   }
+  nav.vertical {
+    left:15%;
+    text-align: center;
+  }
+
+  nav.vertical > ul > li > a > img {
+    display: none;
+  }
+
+  #logo_home
+  {
+    display: block;
+  }
+
 }
 
 /*ESTILOS DEL HTML*/
