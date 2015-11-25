@@ -4,7 +4,7 @@ function checkScreenMinSize() {
                : document.documentElement.offsetWidth;
   var menu = document.getElementById("menu_responsive")
   if (width >= 1148) {
-    menu.style = ""
+    menu.removeAttribute("style")
   }
 }
 

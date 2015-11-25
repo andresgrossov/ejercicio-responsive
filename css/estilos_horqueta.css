@@ -512,13 +512,14 @@ a:hover
 	width:10%;
 	height:10%;
 	top:0%;
-	left:3%;
+	right:3%;
 	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size:contain;
 	z-index:200;
-  display: none;
+  /*display: none;*/
+  display: block;
 }
 
 nav.vertical {
@@ -598,7 +599,8 @@ nav.vertical > ul > li > a:hover {
 
   #logo_home
   {
-    display: block;
+    /*display: block;*/
+    left:3%;
   }
 
 }
