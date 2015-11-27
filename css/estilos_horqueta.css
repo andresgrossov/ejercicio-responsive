@@ -501,6 +501,7 @@ a:hover
 
 #barramenu > a > img {
   position: fixed;
+  top: 5px;
   left: 10px;
   width: 50px;
   height: 40px;
@@ -511,7 +512,7 @@ a:hover
 	position:fixed;
 	width:10%;
 	height:10%;
-	top:0%;
+	/*top:0%;*/
 	right:3%;
 	background-image:url(http://rutasdelconflicto.com/especiales/img/logo_rutas.jpg);
 	background-repeat:no-repeat;
@@ -523,7 +524,7 @@ a:hover
 }
 
 nav.vertical {
-  border-radius: 4px;
+  /*border-radius: 4px;*/
   /*box-shadow: 0 0 10px rgba(0,0,0,.15);*/
   overflow: hidden;
   position: fixed;
@@ -557,12 +558,12 @@ nav.vertical > ul > li > a {
 	/*box-shadow: inset 0 1px 1px rgba(0,0,0,.1), 0 1px 1px rgba(0,0,0,.1);*/
 	color: rgb(255,255,255);
 	display: block;
-  padding: 0 20px 0 20px;
-	font-size: .85rem;
+  padding: 0 30px 0 30px;
+	font-size: 16px;
 	font-weight: 500;
   /*text-align: center;*/
 	height: 50px;
-	letter-spacing: .3rem;
+	/*letter-spacing: .3rem;*/
 	line-height: 50px;
 	/*text-shadow: 0 1px 1px rgba(0,0,0,.1);*/
 	text-transform: uppercase;
@@ -571,11 +572,11 @@ nav.vertical > ul > li > a {
 }
 
 nav.vertical > ul > li > a:hover {
-	background-color: rgb(114, 51, 98);
-	background-image: -webkit-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
+	background-color: rgb(69, 129, 129);
+	/*background-image: -webkit-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
 	background-image: -moz-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
 	background-image: -o-linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
-	background-image: linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));
+	background-image: linear-gradient(150deg, rgb(114, 51, 98), rgb(114, 51, 98));*/
 	cursor: pointer;
 }
 
